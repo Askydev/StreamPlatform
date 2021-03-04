@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/data/data.dart';
+import 'package:netflix_clone/models/models.dart';
+import 'package:netflix_clone/widgets/content_header.dart';
 import 'package:netflix_clone/widgets/custom_appbar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,10 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: _scrollController,
         slivers: [
           SliverToBoxAdapter(
-            child: Container(
-              height: 1000,
-              color: Colors.blue,
-            ),
+            child: ContentHeader(
+              featuredContent: sintelContent,
+            )
           )
         ],
       ),
