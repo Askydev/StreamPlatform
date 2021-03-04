@@ -13,12 +13,20 @@ class ContentHeader extends StatelessWidget {
         Container(
           height: 500.0,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(featuredContent.imageUrl),
-              fit: BoxFit.cover,
-            )
-          ),
-        )
+              image: DecorationImage(
+            image: AssetImage(featuredContent.imageUrl),
+            fit: BoxFit.cover,
+          )),
+        ),
+        Container(
+            height: 500.0,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.black, Colors.transparent],
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+              ),
+            )),
       ],
     );
   }
