@@ -19,14 +19,22 @@ class ContentHeader extends StatelessWidget {
           )),
         ),
         Container(
-            height: 500.0,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.black, Colors.transparent],
-                begin: Alignment.bottomCenter,
-                end: Alignment.topCenter,
-              ),
-            )),
+          height: 500.0,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.black, Colors.transparent],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            ),
+          ),
+        ),
+        Positioned(
+          bottom: 110.0,
+          child: SizedBox(
+            width: 250,
+            child: Image.asset(featuredContent.titleImageUrl),
+          ),
+        ),
       ],
     );
   }
