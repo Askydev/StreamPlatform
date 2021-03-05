@@ -3,6 +3,7 @@ import 'package:netflix_clone/data/data.dart';
 import 'package:netflix_clone/models/models.dart';
 import 'package:netflix_clone/widgets/content_header.dart';
 import 'package:netflix_clone/widgets/custom_appbar.dart';
+import 'package:netflix_clone/widgets/previews.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -53,7 +54,15 @@ class _HomeScreenState extends State<HomeScreen> {
             child: ContentHeader(
               featuredContent: sintelContent,
             )
-          )
+          ),
+          SliverPadding(
+              padding: EdgeInsets.only(top: 20.0),
+          sliver: SliverToBoxAdapter(
+            child: Previews(
+              title: 'Previews',
+              contentList: previews,
+            ),
+          ),)
         ],
       ),
     );
