@@ -28,6 +28,26 @@ class _NavScreenState extends State<NavScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _screens[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.black,
+        items: _icons.map((title, icon) => MapEntry(
+            title,
+            BottomNavigationBarItem(
+              icon: Icon(
+                icon,
+                size: 30.0,
+              ),
+              title: Text(title),
+            )))
+        .values.toList(),
+        currentIndex: _currentIndex,
+        selectedItemColor: Colors.white,
+        selectedFontSize: 11.0,
+        unselectedItemColor: Colors.grey,
+        unselectedFontSize: 11.0,
+        onTap: (index) => setState(()=>_currentIndex=index),
+      ),
     );
   }
 }
