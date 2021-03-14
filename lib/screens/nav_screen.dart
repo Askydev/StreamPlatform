@@ -22,6 +22,7 @@ class _NavScreenState extends State<NavScreen> {
     'Downloads': Icons.file_download,
     'More': Icons.menu,
   };
+  int _currentIndex = 0;
   
   @override
   Widget build(BuildContext context) {
