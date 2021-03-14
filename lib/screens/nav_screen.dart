@@ -23,9 +23,11 @@ class _NavScreenState extends State<NavScreen> {
     'More': Icons.menu,
   };
   int _currentIndex = 0;
-  
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: _screens[_currentIndex],
+    );
   }
 }
