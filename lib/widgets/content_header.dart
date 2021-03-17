@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/models/content_model.dart';
-import 'package:netflix_clone/widgets/responsive.dart';
-import 'package:netflix_clone/widgets/vertical_icon.dart';
+import 'widgets.dart';
 import 'package:video_player/video_player.dart';
 
 class ContentHeader extends StatelessWidget {
@@ -122,24 +121,6 @@ class __contentHeaderDesktopState extends State<_contentHeaderDesktop> {
       child: Stack(
         alignment: Alignment.bottomLeft,
         children: [
-          // Container(
-          //   height: 500.0,
-          //   decoration: BoxDecoration(
-          //       image: DecorationImage(
-          //     image: AssetImage(widget.featuredContent.imageUrl),
-          //     fit: BoxFit.cover,
-          //   )),
-          // ),
-          // Container(
-          //   height: 500.0,
-          //   decoration: const BoxDecoration(
-          //     gradient: LinearGradient(
-          //       colors: [Colors.black, Colors.transparent],
-          //       begin: Alignment.bottomCenter,
-          //       end: Alignment.topCenter,
-          //     ),
-          //   ),
-          // ),
           AspectRatio(
             aspectRatio: _videoController.value.initialized
                 ? _videoController.value.aspectRatio
@@ -207,13 +188,14 @@ class __contentHeaderDesktopState extends State<_contentHeaderDesktop> {
                     icon: Icon(
                       Icons.info_outline,
                       size: 30.0,
+                      color: Colors.black,
                     ),
                     label: const Text(
                       'More Info',
                       style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FontWeight.w600,
-                        color: Colors.black
+                        color: Colors.black,
                       ),
                     ),
                     style: ButtonStyle(

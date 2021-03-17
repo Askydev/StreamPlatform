@@ -7,7 +7,6 @@ import 'package:netflix_clone/widgets/content_list.dart';
 import 'package:netflix_clone/widgets/content_header.dart';
 import 'package:netflix_clone/widgets/custom_appbar.dart';
 import 'package:netflix_clone/widgets/previews.dart';
-import 'package:netflix_clone/app_bar/app_bar_cubit.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -20,6 +19,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   ScrollController _scrollController;
+
   // double _scrollOffset = 0.0;
 
   @override
@@ -52,12 +52,10 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       appBar: PreferredSize(
         preferredSize: Size(screenSize.width, 50.0),
-        child: BlocBuilder<AppBarCubit, double>(
-          builder: (context, scrollOffset){
-          return CustomAppbar(
-            scrollOffset: scrollOffset);
-          }
-        ),
+        child:
+            BlocBuilder<AppBarCubit, double>(builder: (context, scrollOffset) {
+          return CustomAppbar(scrollOffset: scrollOffset);
+        }),
       ),
       body: CustomScrollView(
         controller: _scrollController,

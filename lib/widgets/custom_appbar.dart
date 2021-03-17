@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/assets.dart';
-import 'package:netflix_clone/widgets/responsive.dart';
+import 'widgets.dart';
 
 class CustomAppbar extends StatelessWidget {
   final double scrollOffset;

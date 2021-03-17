@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:netflix_clone/screens/home_screen.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'screens.dart';
 import 'package:netflix_clone/app_bar/cubits.dart';
 import 'package:netflix_clone/widgets/responsive.dart';
 
