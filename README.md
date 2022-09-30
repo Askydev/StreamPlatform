@@ -1,1 +1,1 @@
-# Flutter Netflix Responsive UI
+# Flutter Stream Platform Responsive UI
